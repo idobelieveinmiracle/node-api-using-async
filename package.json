@@ -1,0 +1,26 @@
+{
+  "name": "jwt-async",
+  "version": "1.0.0",
+  "description": "nodejs using jwt asyn with user and post models and something else...",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "bcrypt": "^3.0.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.3",
+    "mongoose-unique-array": "^0.3.0"
+  },
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "jwt",
+    "asyns"
+  ],
+  "author": "quoc hung",
+  "license": "ISC"
+}
