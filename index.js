@@ -26,5 +26,6 @@ app.use(bodyParser.json());
 
 // routes
 app.use('/api/users', require('./routes/users'));
+app.use('/api/posts', require('./routes/posts'));
 
 app.listen(process.env.port || 8000, () => console.log('server started'));
