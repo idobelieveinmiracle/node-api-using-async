@@ -9,6 +9,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const token = req.header('auth-token');
+  console.log('requested');
   let decoded = null;
   try {
     decoded = jwt.verify(token, process.env.TOKEN_SECRET);  

@@ -8,8 +8,6 @@ const dotenv = require('dotenv');
 const app = express();
 
 
-// cors middleware
-// app.use(cors);
 
 dotenv.config();
 
@@ -18,12 +16,20 @@ mongoose.connect( process.env.DB_CONNECT,
   {useNewUrlParser: true},
   () => console.log('connected to the database'));
 
+mongoose.Promise = global.Promise;
+
+// cors middleware
+// app.use(cors);
 
 // static url
 app.use('/', express.static('asserts'));
 
 // body parser middeware
 app.use(bodyParser.json());
+
+app.use(function(err, req, res, next){
+  res.status(422).send({error: err.message});
+});
 
 // routes
 app.use('/api/users', require('./routes/users'));
