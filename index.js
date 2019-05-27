@@ -7,6 +7,10 @@ const dotenv = require('dotenv');
 
 const app = express();
 
+
+// cors middleware
+// app.use(cors);
+
 dotenv.config();
 
 // connect database
@@ -17,9 +21,6 @@ mongoose.connect( process.env.DB_CONNECT,
 
 // static url
 app.use('/', express.static('asserts'));
-
-// cors middleware
-// app.use(cors);
 
 // body parser middeware
 app.use(bodyParser.json());
