@@ -1,9 +1,10 @@
 const express = require('express');
-const router = express.Router();
 const Post = require('../models/Post');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+
+const router = express.Router();
 
 
 router.get('/', async (req, res) => {
