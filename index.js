@@ -19,7 +19,7 @@ mongoose.connect( process.env.DB_CONNECT,
 mongoose.Promise = global.Promise;
 
 // cors middleware
-// app.use(cors);
+app.use(cors());
 
 // static url
 app.use('/', express.static('asserts'));
